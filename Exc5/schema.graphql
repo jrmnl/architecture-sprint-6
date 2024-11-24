@@ -1,0 +1,24 @@
+type Query {
+  client(id: String!): Client
+}
+
+type Client {
+  id: String!
+  name: String!
+  age: Int!
+  documents: [Document]!
+  relatives: [ClientRelation]!
+}
+
+type ClientRelation {
+  client: Client!
+  relationType: String!
+}
+
+type Document {
+  id: String!
+  type: String!
+  number: String!
+  issueDate: String!
+  expiryDate: String!
+}
